@@ -1,0 +1,21 @@
+#!/bin/bash
+
+function gogs.describe {
+   echo "Creates a new gogs (slick git repository) repository."
+   gogs.help
+}
+
+function gogs.help {
+  echo "Install with oc-cluster plugin-install gogs"
+}
+
+function gogs.install {
+   status &> /dev/null  || error_exit "There's no cluster running to install gogs on. Try to run 'oc-cluster up' first."
+   echo "Installing plugin"
+}
+
+function gogs.uninstall {
+  echo "Uninstalling plugin"
+}
+
+gogs.describe
